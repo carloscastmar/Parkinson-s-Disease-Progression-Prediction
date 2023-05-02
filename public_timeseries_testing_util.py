@@ -5,12 +5,13 @@ Mirrors the production timeseries API in the crucial respects, but won't be as f
 ONLY works afer the first three variables in MockAPI.__init__ are populated.
 '''
 
+from pathlib import Path
 from typing import Sequence, Tuple
 
 import pandas as pd
 
 
-class MockApi:
+class amp_pd_peptide:
     def __init__(self):
         '''
         YOU MUST UPDATE THE FIRST THREE LINES of this method.
@@ -22,9 +23,15 @@ class MockApi:
                 A call to iter_test serves all rows of all dataframes with the current group ID value.
             export_group_id_column: if true, the dataframes iter_test serves will include the group_id_column values.
         '''
-        self.input_paths: Sequence[str] =
-        self.group_id_column: str =
-        self.export_group_id_column: bool =
+        base_path = Path('example_test_files')
+        self.input_paths:  Sequence[str] = [
+            str(base_path / 'test.csv'),
+            str(base_path / 'test_peptides.csv'),
+            str(base_path / 'test_proteins.csv'),
+            str(base_path / 'sample_submission.csv'),
+        ]
+        self.group_id_column: str = "group_key"
+        self.export_group_id_column: bool = True
         # iter_test is only designed to support at least two dataframes, such as test and sample_submission
         assert len(self.input_paths) >= 2
 
@@ -63,7 +70,7 @@ class MockApi:
                 print('You must call `predict()` successfully before you can continue with `iter_test()`', flush=True)
                 yield None
 
-        with open('submission.csv', 'w') as f_open:
+        with open('submission3.csv', 'w') as f_open:
             pd.concat(self.predictions).to_csv(f_open, index=False)
         self._status = 'finished'
 
@@ -83,4 +90,4 @@ class MockApi:
 
 
 def make_env():
-    return MockApi()
+    return amp_pd_peptide()
