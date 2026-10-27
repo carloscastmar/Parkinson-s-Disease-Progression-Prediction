@@ -71,7 +71,7 @@ flake8 @ file:///opt/conda/conda-bld/flake8_1648129545443/work
 Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 fonttools==4.25.0
 fsspec @ file:///C:/Windows/TEMP/abs_a2mhnomvfy/croots/recipe/fsspec_1659972224540/work
-future==0.18.2
+future==0.18.3
 gensim @ file:///C:/ci/gensim_1646806960702/work
 glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
 greenlet @ file:///C:/ci/greenlet_1628888257991/work
@@ -135,7 +135,7 @@ mkl-fft==1.3.1
 mkl-random @ file:///C:/ci/mkl_random_1626186163140/work
 mkl-service==2.4.0
 mock @ file:///tmp/build/80754af9/mock_1607622725907/work
-mpmath==1.2.1
+mpmath==1.3.0
 msgpack @ file:///C:/ci/msgpack-python_1652347515899/work
 multipledispatch==0.6.0
 munkres==1.1.4
@@ -187,7 +187,6 @@ pyasn1-modules==0.2.8
 pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1636635402688/work
 pycosat==0.6.3
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-pycrypto==2.6.1
 pyct @ file:///C:/ci/pyct_1658487981982/work
 pycurl==7.45.1
 PyDispatcher==2.0.5
@@ -205,7 +204,7 @@ pyparsing @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_7f_7lba6rl/croots/r
 pyreadline==2.1
 pyrsistent @ file:///C:/ci/pyrsistent_1636093257833/work
 PySocks @ file:///C:/ci/pysocks_1594394709107/work
-pytest==7.1.2
+pytest==9.0.3
 python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
 python-lsp-black @ file:///tmp/build/80754af9/python-lsp-black_1634232156041/work
 python-lsp-jsonrpc==1.0.0
